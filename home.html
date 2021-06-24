@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="stroll-meta" content="404POISON">
+<title>George's Website</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Work+Sans" rel="stylesheet">
+<link rel="stylesheet" href="css/stroll.css" />
+<link rel="stylesheet" href="css/george.css" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55205533-9"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-55205533-9');
+    </script>
+<script src="js/stroll.js"></script>
+<script>
+
+        const strollmap = {
+            // Basic info
+            "home": {
+                type: "page",
+                hname: "Home",
+                href: "home.html",
+                nav: {
+                    down: "projects",
+                    left: "scheduler",
+                    right: "about",
+                },
+            },
+            "about": {
+                type: "page",
+                hname: "About",
+                href: "about.html",
+                nav: {
+                    down: "meta",
+                    left: "home",
+                    right: "contact",
+                },
+            },
+            "meta": {
+                type: "page",
+                hname: "About Site",
+                href: "bout-site.html",
+                nav: {
+                    up: "about",
+                },
+            },
+            "contact": {
+                type: "page",
+                hname: "Contact",
+                href: "contact.html",
+                nav: {
+                    left: "about",
+                },
+            },
+
+            // Projects
+            "projects": {
+                type: "page",
+                hname: "Projects",
+                href: "projects/contents.html",
+                nav: {
+                    up: "home",
+                    down: "projects/troav",
+                    right: "essays"
+                },
+            },
+            "projects/troav": {
+                type: "page",
+                hname: "Troav",
+                href: "projects/troav.html",
+                nav: {
+                    up: "projects",
+                    down: "projects/smartdorm",
+                    left: "link/troav",
+                },
+            },
+            "link/troav": {
+                type: "link",
+                hname: "Troav Website",
+                href: "https://troav.com",
+                nav: {
+                    right: "projects/troav",
+                },
+            },
+            "projects/smartdorm": {
+                type: "page",
+                hname: "SmartDorm",
+                href: "projects/smartdorm.html",
+                nav: {
+                    up: "projects/troav",
+                    down: "projects/unitopia",
+                },
+            },
+            "projects/unitopia": {
+                type: "page",
+                hname: "Unitopia",
+                href: "projects/unitopia.html",
+                nav: {
+                    up: "projects/smartdorm",
+                    down: "projects/korsak",
+                    left: "link/unitopia",
+                },
+            },
+            "link/unitopia": {
+                type: "link",
+                hname: "Unitopia Website",
+                href: "https://george.moe/unitopia",
+                nav: {
+                    right: "projects/unitopia",
+                },
+            },
+            "projects/korsak": {
+                type: "page",
+                hname: "Korsak",
+                href: "projects/korsak.html",
+                nav: {
+                    up: "projects/unitopia",
+                    down: "projects/semaphore",
+                    left: "link/korsak",
+                    right: "link/korsakpaper"
+                },
+            },
+            "link/korsak": {
+                type: "link",
+                hname: "Try Korsak",
+                href: "https://korsak.ovbot.net",
+                nav: {
+                    right: "projects/korsak",
+                },
+            },
+            "link/korsakpaper": {
+                type: "link",
+                hname: "Korsak Paper",
+                href: "/media/projects/korsak/korsak_20181217_lowres_scan.pdf",
+                nav: {
+                    left: "projects/korsak",
+                },
+            },
+            "projects/semaphore": {
+                type: "page",
+                hname: "Semaphore",
+                href: "projects/semaphore.html",
+                nav: {
+                    up: "projects/korsak",
+                    down: "projects/questtracker",
+                    left: "link/semaphore-video",
+                    right: "link/semaphore",
+                },
+            },
+            "link/semaphore": {
+                type: "link",
+                hname: "Semaphore DevPost",
+                href: "https://devpost.com/software/semaphore",
+                nav: {
+                    left: "projects/semaphore",
+                },
+            },
+            "link/semaphore-video": {
+                type: "link",
+                hname: "Semaphore Video",
+                href: "https://www.youtube.com/watch?v=ElZh8Gh7SD8",
+                nav: {
+                    right: "projects/semaphore",
+                },
+                options: {
+                    noRoute: true,
+                }
+            },
+            "projects/questtracker": {
+                type: "page",
+                hname: "Quest&#8203;Tracker",
+                href: "projects/questtracker.html",
+                nav: {
+                    up: "projects/semaphore",
+                    down: "projects/whatdo",
+                },
+            },
+            "projects/whatdo": {
+                type: "page",
+                hname: "WhatDo",
+                href: "projects/whatdo.html",
+                nav: {
+                    up: "projects/questtracker",
+                    down: "projects/clubhub",
+                },
+            },
+            "projects/clubhub": {
+                type: "page",
+                hname: "Club Hub",
+                href: "projects/clubhub/summary.html",
+                nav: {
+                    up: "projects/whatdo",
+                    down: "projects/noaa",
+                    left: "link/clubhub",
+                    right: "projects/clubhub/detail",
+                },
+            },
+            "projects/clubhub/detail": {
+                type: "page",
+                hname: "Club Hub Story",
+                href: "projects/clubhub/detail.html",
+                nav: {
+                    left: "projects/clubhub",
+                },
+                options: {
+                    format: "article",
+                }
+            },
+            "link/clubhub": {
+                type: "link",
+                hname: "Club Hub Home",
+                href: "https://clubhub.live",
+                nav: {
+                    left: "projects/clubhub",
+                },
+            },
+            "projects/noaa": {
+                type: "page",
+                hname: "NOAA",
+                href: "projects/noaa/summary.html",
+                nav: {
+                    up: "projects/clubhub",
+                    down: "projects/scheduler",
+                    right: "projects/noaa/detail",
+                },
+            },
+            "projects/noaa/detail": {
+                type: "page",
+                hname: "NOAA Detail",
+                href: "projects/noaa/detail.html",
+                nav: {
+                    left: "projects/noaa",
+                },
+                options: {
+                    format: "article",
+                },
+            },
+            "projects/scheduler": {
+                type: "page",
+                hname: "Scheduler",
+                href: "projects/scheduler.html",
+                nav: {
+                    up: "projects/noaa",
+                    left: "scheduler",
+                },
+            },
+            "scheduler": {
+                type: "link",
+                hname: "Scheduler",
+                href: "https://george.moe/imsa-scheduler/",
+                nav: {
+                    right: "home",
+                },
+            },
+
+            // Essays
+            "essays": {
+                type: "page",
+                hname: "Essays",
+                href: "essays/contents.html",
+                nav: {
+                    left: "projects",
+                    down: "essays/animals"
+                }
+            },
+            "essays/animals": {
+                type: "page",
+                hname: "Animals",
+                href: "essays/animals.html",
+                nav: {
+                    up: "essays",
+                },
+                options: {
+                    format: "article",
+                },
+            },
+
+            // Singleton pages
+            "privacy": {
+                type: "page",
+                hname: "Privacy",
+                href: "privacy.html",
+                nav: {
+                    left: "home",
+                },
+                options: {
+                    format: "article",
+                },
+            },
+            "time": {
+                type: "page",
+                hname: "Time",
+                href: "time.html",
+                nav: {
+                    left: "home",
+                },
+            },
+            "domains": {
+                type: "page",
+                hname: "Domains",
+                href: "domains.html",
+                nav: {
+                    left: "home",
+                },
+            },
+            "sprint": {
+                type: "link",
+                hname: "Sprint Tool",
+                href: "sprint.html",
+                nav: {
+                    left: "home",
+                },
+            },
+
+            // Continuity
+            "continuity/clubhub.h": {
+                type: "page",
+                hname: "Continutiy",
+                href: "continuity.html",
+            },
+
+            // Meta
+            "notfound": {
+                type: "page",
+                href: "404.html",
+                hname: "404",
+                nav: {
+                    left: "home",
+                },
+            }
+        };
+
+        function begin() {
+            window.stroll = new Stroll(strollmap, {
+                index: "home",
+                titleBase: "George's Website",
+                trackingID: "UA-55205533-9",
+            });
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", begin);
+        } else {
+            begin();
+        }
+    </script>
+</head>
+<body>
+<div id="stroll">
+<div id="stroll-view">
+<div id="stroll-main" class="strollpage"></div>
+<div id="stroll-up" class="strollpage"></div>
+<div id="stroll-down" class="strollpage"></div>
+<div id="stroll-left" class="strollpage"></div>
+<div id="stroll-right" class="strollpage"></div>
+</div>
+<div id="stroll-nav"></div>
+</div>
+</body>
+</html>
